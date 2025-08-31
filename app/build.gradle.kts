@@ -48,6 +48,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.24")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:1.9.24")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.11.0")
+
+
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.0")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
