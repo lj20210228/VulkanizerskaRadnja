@@ -9,10 +9,10 @@ package com.example.vulkanizerskaradnja.auto_radnja.gume
  * @property visina Podaci o sirini gume Int vresnost
  */
 data class AutoGuma(
-    var markaModel:String?=null,
-    var precnik:Int=-1
-    ,var sirina:Int=-1,
-    var visina:Int=-1
+    private var markaModel:String?=null,
+    private var precnik:Int=-1,
+    private var sirina:Int=-1,
+    private var visina:Int=-1
 ){
 
     /**
@@ -28,14 +28,9 @@ data class AutoGuma(
      * Funkcija koja vraca ime marke i modela
      *
      * @return Ime marke i modela,String tip
-     * @throws NullPointerException Ako je marka model null, bacice se izuzetak
      */
-    fun getMarkaModel():String{
-        if(this.markaModel==null)
-            throw NullPointerException("Marka i model nemaju vrednost")
-        else
-            return this.markaModel!!
-    }
+    fun getMarkaModel():String?=markaModel
+
 
     /**
      * Set metoda za atribut markaModel
@@ -129,6 +124,7 @@ data class AutoGuma(
      * @return boolean Ako su svi parametri ovog i Any objekta isti vraca se true, u suprotnom false, ili ako other nije AutoGuma objekat takodje se vraca false
      */
     override fun equals(other: Any?): Boolean {
+
         if (this === other) return true
         if (other !is AutoGuma) return false
 
