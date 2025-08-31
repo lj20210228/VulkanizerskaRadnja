@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("org.jetbrains.dokka") version "1.9.20"
 }
 
 android {
@@ -35,6 +36,13 @@ android {
     }
     tasks.withType<Test>(){
         useJUnitPlatform()
+    }
+    tasks.dokkaHtml {
+        outputDirectory.set(buildDir.resolve("dokka"))
+        dokkaSourceSets.named("main") {
+            includes.from("docs/module.md")
+            samples.from("samples/")
+        }
     }
 }
 
