@@ -17,6 +17,7 @@ class VulkanizerskaRadnja:Radnja {
 
     override fun pronadjiGumu(markaModel: String?): List<AutoGuma> {
 
+
         val povratnaLista= mutableListOf<AutoGuma>()
         if(markaModel==null){
             throw NullPointerException("Marka i model ne mogu biti null")
@@ -24,11 +25,9 @@ class VulkanizerskaRadnja:Radnja {
         if(markaModel.length<3){
             throw IllegalArgumentException("Morate uneti bar 3 karaktera za pretragu")
         }
-        for (guma in lista){
-            if (guma.getMarkaModel()==markaModel)
-                povratnaLista.add(guma)
+        return lista.filter { it->
+            it.getMarkaModel().equals(markaModel)
         }
-        return povratnaLista
     }
 
 
