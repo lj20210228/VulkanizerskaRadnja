@@ -3,10 +3,10 @@ package com.example.vulkanizerskaradnja.auto_radnja.gume
 /**
  * Klasa koja cuva podatke o Auto Gumama
  *
- * @property markaModel Podaci o marki i modelu gume, String vrednost
- * @property precnik Podaci o precniku gume Int vrednost
- * @property sirina Podaci o sirini gume Int vrednost
- * @property visina Podaci o sirini gume Int vresnost
+ * @property markaModel Podaci o marki i modelu gume, String vrednost,najmanje 3 karaktera
+ * @property precnik Podaci o precniku gume Int vrednost mora biti izmedju 13 i 22
+ * @property sirina Podaci o sirini gume Int vrednost mora biti izmedju 135 i 355
+ * @property visina Podaci o visini gume Int vresnost mora biti izmedju 25 i 95
  */
 data class AutoGuma(
     private var markaModel:String?=null,
