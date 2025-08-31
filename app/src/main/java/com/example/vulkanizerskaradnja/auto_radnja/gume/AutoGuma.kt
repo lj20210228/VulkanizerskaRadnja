@@ -14,6 +14,16 @@ data class AutoGuma(
     ,var sirina:Int=-1,
     var visina:Int=-1
 ){
+
+    /**
+     * Inicijalizacija klase na prosledjene vrednosti
+     */
+    init {
+        setMarkaModel(markaModel)
+        setSirina(sirina)
+        setPrecnik(precnik)
+        setVisina(visina)
+    }
     /**
      * Funkcija koja vraca ime marke i modela
      *
